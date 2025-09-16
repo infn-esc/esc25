@@ -1,0 +1,103 @@
+title: Efficient Scientific Computing 2025
+menu_header: ESC25
+indico: https://agenda.infn.it/event/45177
+
+# the jekylly-github-metadata plugin generates the site.github context
+# and uses it to populate variables such as site.url and site.base_url
+plugins:
+  - "jekyll-github-metadata"
+
+menu:
+  - name: basic
+    items:
+    - name: environment
+    - name: compiling
+  # - name: architecture
+  #   items:
+  #   - name: discoverHW
+  #     label: Discover Hardware Architecture
+  #   - name: perf
+  #     label: Profiling using "perf"
+  - name: cpp
+    label: C++
+    items:
+    - name: algorithms
+    # - name: issues
+    - name: move_ops
+      label: Move operations
+    # - name: rvo
+    #   label: Return Value Optimization
+    - name: containers
+    - name: compiletime
+      label: Compile-time computation
+    - name: pointers
+      label: Managing resources
+  # - name: floatingpoints
+  #   label: FLOATING POINT
+  #   items:
+  #   - name: fprep
+  #     label: Floating-Point Representation
+  #   - name: fpcommutative
+  #     label: Commutative sum
+  #   - name: fpquadratic
+  #     label: Quadratic Equation
+  #   - name: fppi
+  #     label: Pi approximation error
+  #   - name: fpsafemath
+  #     label: Floating-Point Optimizations
+  # - name: vectorization
+  #   items:
+  #   - name: pi
+  #     label: Vectorize computation of pi
+  - name: gpu
+    label: GPU Programming
+    items:
+    - name: cuda
+      label: CUDA
+    - name: portability
+      label: Portability
+  #   items:
+  #   - name: auto_vectorization
+  #     label: Automatic vectorization
+  #   - name: stdthreads_tbb
+  #     label: threads and tbb
+  #   - name: cuda
+  #   - name: mpi
+  - name: memory
+    label: Memory Management
+    items:
+    - name: basics
+    - name: fs
+      label: False Sharing 
+    - name: datastructure
+      label: Data structures
+    - name: allocator
+    - name: asan
+      label: Address Sanitizer
+  - name: pybind
+    label: Python bindings
+    items:
+    - name: cpp_to_py
+      label: Using C++ in Python
+    - name: py_to_cpp
+      label: Using Python in C++
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
