@@ -11,9 +11,9 @@ mode. It's also good practice to enable a high level of warnings.
 Build [pi_time.cpp]({{ site.github.repository_url }}/blob/main/hands-on/basic/pi_time.cpp):
 
 ```shell
-[studentN@hpc-201-11-40 ~]$ cd {{ site.github.repository_name }}/hands-on/{{ page.section }}
-[studentN@hpc-201-11-40 basic]$ g++ -Wall -Wextra -o pi_time pi_time.cpp
-[studentN@hpc-201-11-40 basic]$ ./pi_time 1000
+[username@esc25-a100-2 ~]$ cd {{ site.github.repository_name }}/hands-on/{{ page.section }}
+[username@esc25-a100-2 basic]$ g++ -Wall -Wextra -o pi_time pi_time.cpp
+[username@esc25-a100-2 basic]$ ./pi_time 1000
 pi = 3.14159 for 1000 iterations in 4.6336e-05 s
 ```
 
