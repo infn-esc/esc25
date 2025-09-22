@@ -1,4 +1,4 @@
-# An Introduction to Parallel Programming using OpenMP
+An Introduction to Parallel Programming using OpenMP
 
 This directory contains exercises and solutions for a hands-on
 OpenMP course.  Information about these programs can be found
