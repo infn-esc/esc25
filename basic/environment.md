@@ -94,7 +94,7 @@ username@esc25-a100-1's password:
 ...
 [me@mylaptop ~]$ cat ~/.ssh/config
 Host escbastion
-  Hostname esc.cloud.cnaf.infn.it
+  Hostname esc25.cloud.cnaf.infn.it
   User username
   IdentityFile ~/.ssh/id_rsa_student_esc
 
@@ -135,129 +135,40 @@ All the school hands-on material is included in a git repository. Get it using:
 
 The repository contains also these pages.
 
-## Enable the compiler
+## Check the environment
 
-Log into `esc`, enable the use of `gcc 12.3` and check that it's available
+Once logged into `esc`, verify that the environment is set up correctly:
 
 ```shell
-[username@esc25-a100-1 ~]$ module load compilers/gcc-12.3_sl7
 [username@esc25-a100-1 ~]$ gcc --version
-gcc (GCC) 12.3.0
+gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)
+...
+[username@esc25-a100-1 ~]$ gdb --version
+GNU gdb (AlmaLinux) 14.2-4.1.el9_6
+...
+[username@esc25-a100-1 ~]$ valgrind --version
+valgrind-3.24.0
+[username@esc25-a100-1 ~]$ scl enable gcc-toolset-14 -- gcc --version
+gcc (GCC) 14.2.1 20250110 (Red Hat 14.2.1-7)
 ...
 ```
 
-To guarantee that the module is always loaded in the environment, you can add
-the `module load` in the shell initialization file.
+As you can see from the last command, beside the native compiler (gcc v. 11.5), there is also a more recent version (gcc v. 14.2), available through a so-called software collection.
+
+To always work with the more recent version, enable the toolset in a new shell:
 
 ```shell
-[username@esc25-a100-1 ~]$ echo 'module load compilers/gcc-12.3_sl7' >> ${HOME}/.bashrc
-```
-
-## Install and test Google benchmark
-
-Building and installing Google benchmark requires the cmake module;
-however it is not necessary to enable cmake after Google benchmark has
-been installed.
-
-Download, build and install Google benchmark from the sources:
-```shell
-[username@esc25-a100-1 ]$ git clone https://github.com/google/benchmark.git
-[username@esc25-a100-1 ]$ mkdir benchmark/build
-[username@esc25-a100-1 ]$ cd benchmark/build
-[username@esc25-a100-1 ]$ module load compilers/cmake-3.27.7
-[username@esc25-a100-1 ]$ cmake -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${HOME}/benchmark ..
-[username@esc25-a100-1 ]$ make -j8 install
-[username@esc25-a100-1 ]$ cd
-[username@esc25-a100-1 ]$ export BENCHMARKROOT=${HOME}/benchmark
-[username@esc25-a100-1 ]$ export CPATH=${CPATH}:${BENCHMARKROOT}/include
-[username@esc25-a100-1 ]$ export LIBRARY_PATH=${LIBRARY_PATH}:${BENCHMARKROOT}/lib64
-```
-
-To execute the last commands automatically every time you log in, add
-them at the end of your `.bashrc` file:
-
-```shell
-[username@esc25-a100-1 ~]$ cat >> ${HOME}/.bashrc << "@EOF"
-export BENCHMARKROOT=${HOME}/benchmark
-export CPATH=${CPATH}:${BENCHMARKROOT}/include
-export LIBRARY_PATH=${LIBRARY_PATH}:${BENCHMARKROOT}/lib64
-@EOF
-```
-
-To test that Google benchmark is correctly installed we can use a
-[simple test program](https://github.com/google/benchmark?tab=readme-ov-file#basic-usage):
-
-```c++
-#include <benchmark/benchmark.h>
-
-static void BM_StringCreation(benchmark::State& state) {
-  for (auto _ : state)
-    std::string empty_string;
-}
-// Register the function as a benchmark
-BENCHMARK(BM_StringCreation);
-
-// Define another benchmark
-static void BM_StringCopy(benchmark::State& state) {
-  std::string x = "hello";
-  for (auto _ : state)
-    std::string copy(x);
-}
-BENCHMARK(BM_StringCopy);
-
-BENCHMARK_MAIN();
-```
-
-Save this program as `benchtest.cc`, compile it, and run it with:
-
-```shell
-[username@esc25-a100-1 ~]$ g++ -std=c++17 -O2 benchtest.cc -lbenchmark -pthread -o benchtest
-[username@esc25-a100-1 ~]$ ./benchtest
-```
-
-You should see an output similar to:
-
-```
-2024-10-16T14:09:28+02:00
-Running ./benchtest
-Run on (80 X 3700 MHz CPU s)
-CPU Caches:
-  L1 Data 32 KiB (x40)
-  L1 Instruction 32 KiB (x40)
-  L2 Unified 1024 KiB (x40)
-  L3 Unified 28160 KiB (x2)
-Load Average: 1.54, 1.31, 0.78
-***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
-------------------------------------------------------------
-Benchmark                  Time             CPU   Iterations
-------------------------------------------------------------
-BM_StringCreation      0.000 ns        0.000 ns   1000000000000
-BM_StringCopy           7.56 ns         7.56 ns     70446029
-```
-
-## Install oneAPI Threading Building Blocks
-
-Download and install the latest release of oneAPI TBB:
-```shell
-[username@esc25-a100-1 ~]$ wget https://github.com/oneapi-src/oneTBB/releases/download/v2021.13.0/oneapi-tbb-2021.13.0-lin.tgz
-[username@esc25-a100-1 ~]$ sha256sum oneapi-tbb-2021.13.0-lin.tgz
-f5c9304710051f0193a07fb91b6d6ada5a3e0a6d623951ee176b1897816ecf4c  oneapi-tbb-2021.13.0-lin.tgz
-
-[username@esc25-a100-1 ~]$ tar xaf oneapi-tbb-2021.13.0-lin.tgz
-[username@esc25-a100-1 ~]$ ln -s oneapi-tbb-2021.13.0 tbb
-[username@esc25-a100-1 ~]$ source ${HOME}/tbb/env/vars.sh
-```
-
-To execute the last command automatically every time you log in, add it to the end of your `.bashrc` file:
-```shell
-[username@esc25-a100-1 ~]$ echo 'source ${HOME}/tbb/env/vars.sh' >> ${HOME}/.bashrc
+[username@esc25-a100-1 ~]$ scl enable gcc-toolset-14 bash
+[username@esc25-a100-1 ~]$ gcc --version
+gcc (GCC) 14.2.1 20250110 (Red Hat 14.2.1-7)
+...
 ```
 
 ## Editing source code
 
 ### Editing locally
 
-On `esc` you can find several editors available, such as `vim`, `emacs`, `nano`. If
+On `esc` you can find several editors available, such as `vim` and `emacs`. If
 the X display is available, graphical editors will open a window on your laptop;
 the network latency however may not be good enough to give you a fine
 experience. Just try.
