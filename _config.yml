@@ -18,20 +18,20 @@ menu:
   #     label: Discover Hardware Architecture
   #   - name: perf
   #     label: Profiling using "perf"
-  - name: cpp
-    label: C++
-    items:
-    - name: algorithms
-    # - name: issues
-    - name: move_ops
-      label: Move operations
-    # - name: rvo
-    #   label: Return Value Optimization
-    - name: containers
-    - name: compiletime
-      label: Compile-time computation
-    - name: pointers
-      label: Managing resources
+  # - name: cpp
+  #   label: C++
+  #   items:
+  #   - name: algorithms
+  #   # - name: issues
+  #   - name: move_ops
+  #     label: Move operations
+  #   # - name: rvo
+  #   #   label: Return Value Optimization
+  #   - name: containers
+  #   - name: compiletime
+  #     label: Compile-time computation
+  #   - name: pointers
+  #     label: Managing resources
   # - name: floatingpoints
   #   label: FLOATING POINT
   #   items:
@@ -49,13 +49,13 @@ menu:
   #   items:
   #   - name: pi
   #     label: Vectorize computation of pi
-  - name: gpu
-    label: GPU Programming
-    items:
-    - name: cuda
-      label: CUDA
-    - name: portability
-      label: Portability
+  # - name: gpu
+  #   label: GPU Programming
+  #   items:
+  #   - name: cuda
+  #     label: CUDA
+  #   - name: portability
+  #     label: Portability
   #   items:
   #   - name: auto_vectorization
   #     label: Automatic vectorization
@@ -63,24 +63,24 @@ menu:
   #     label: threads and tbb
   #   - name: cuda
   #   - name: mpi
-  - name: memory
-    label: Memory Management
-    items:
-    - name: basics
-    - name: fs
-      label: False Sharing 
-    - name: datastructure
-      label: Data structures
-    - name: allocator
-    - name: asan
-      label: Address Sanitizer
-  - name: pybind
-    label: Python bindings
-    items:
-    - name: cpp_to_py
-      label: Using C++ in Python
-    - name: py_to_cpp
-      label: Using Python in C++
+  # - name: memory
+  #   label: Memory Management
+  #   items:
+  #   - name: basics
+  #   - name: fs
+  #     label: False Sharing 
+  #   - name: datastructure
+  #     label: Data structures
+  #   - name: allocator
+  #   - name: asan
+  #     label: Address Sanitizer
+  # - name: pybind
+  #   label: Python bindings
+  #   items:
+  #   - name: cpp_to_py
+  #     label: Using C++ in Python
+  #   - name: py_to_cpp
+  #     label: Using Python in C++
 
 # Exclude from processing.
 # The following items will not be processed, by default.
