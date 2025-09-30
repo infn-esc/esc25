@@ -25,6 +25,8 @@ menu:
     - name: containers
     - name: pointers
       label: Managing resources
+    - name: issues
+      label: Memory issues
     - name: move_ops
       label: Move operations
     - name: rvo
