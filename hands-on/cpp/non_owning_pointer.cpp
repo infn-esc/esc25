@@ -13,9 +13,6 @@ int main()
   // delete [] p;
 }
 
-
-#include <cstring>
-
 char* some_api() {
   static char s[] = "Hello, world!";
   return std::strstr(s, "orl");
