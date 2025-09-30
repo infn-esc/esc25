@@ -18,20 +18,19 @@ menu:
   #     label: Discover Hardware Architecture
   #   - name: perf
   #     label: Profiling using "perf"
-  # - name: cpp
-  #   label: C++
-  #   items:
-  #   - name: algorithms
-  #   # - name: issues
-  #   - name: move_ops
-  #     label: Move operations
-  #   # - name: rvo
-  #   #   label: Return Value Optimization
-  #   - name: containers
-  #   - name: compiletime
-  #     label: Compile-time computation
-  #   - name: pointers
-  #     label: Managing resources
+  - name: cpp
+    label: C++
+    items:
+    - name: algorithms
+    - name: containers
+    - name: pointers
+      label: Managing resources
+    - name: move_ops
+      label: Move operations
+    - name: rvo
+      label: Return Value Optimization
+    # - name: compiletime
+    #   label: Compile-time computation
   # - name: floatingpoints
   #   label: FLOATING POINT
   #   items:
