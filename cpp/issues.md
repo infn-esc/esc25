@@ -28,14 +28,14 @@ Note how the compiler can sometimes warn us about problems in our code.
 Build and run, directly and through the _address sanitizer_, the following small
 programs:
 
-* [`non_owning_pointer.cpp`]({{site.exercises_repo}}/hands-on/cpp/non_owning_pointer.cpp).
+* [`non_owning_pointer.cpp`]({{ site.github.repository_name }}/hands-on/cpp/non_owning_pointer.cpp).
   Uncomment the lines containing calls to `free` or `delete` and see what the
   consequences are at run-time
-* [`array_too_small.cpp`]({{site.exercises_repo}}/hands-on/cpp/array_too_small.cpp)
-* [`leak.cpp`]({{site.exercises_repo}}/hands-on/cpp/leak.cpp). Comment the
+* [`array_too_small.cpp`]({{ site.github.repository_name }}/hands-on/cpp/array_too_small.cpp)
+* [`leak.cpp`]({{ site.github.repository_name }}/hands-on/cpp/leak.cpp). Comment the
   allocations and see what the consequences are at run-time
-* [`double_delete.cpp`]({{site.exercises_repo}}/hands-on/cpp/double_delete.cpp)
-* [`missed_delete.cpp`]({{site.exercises_repo}}/hands-on/cpp/missed_delete.cpp).
+* [`double_delete.cpp`]({{ site.github.repository_name }}/hands-on/cpp/double_delete.cpp)
+* [`missed_delete.cpp`]({{ site.github.repository_name }}/hands-on/cpp/missed_delete.cpp).
   Uncomment the lines about the `try`/`catch` block and position them in
   different places; see what the consequences are at run-time
 
