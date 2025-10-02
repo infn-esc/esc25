@@ -64,17 +64,19 @@ menu:
   #     label: threads and tbb
   #   - name: cuda
   #   - name: mpi
-  # - name: memory
-  #   label: Memory Management
-  #   items:
-  #   - name: basics
-  #   - name: fs
-  #     label: False Sharing 
-  #   - name: datastructure
-  #     label: Data structures
-  #   - name: allocator
-  #   - name: asan
-  #     label: Address Sanitizer
+  - name: memory
+    label: Memory Management
+    items:
+    - name: basics
+    - name: fs
+      label: False Sharing 
+    - name: datastructure
+      label: Data structures
+    - name: allocator
+    - name: asan
+      label: Address Sanitizer
+    - name: am 
+      label: Atomics and Mutex 
   # - name: pybind
   #   label: Python bindings
   #   items:
