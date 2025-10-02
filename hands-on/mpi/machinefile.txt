@@ -1,0 +1,2 @@
+esc1  slots=1
+esc2  slots=1
