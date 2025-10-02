@@ -194,3 +194,48 @@ following:
 
 For all these options to work seamlessly, however, you should first simplify
 your use of SSH to connect to `esc`, as described above.
+
+## Environment configuration for MPI hands-on
+
+### .bashrc configuration to locate openmpi bins and libs
+OpenMPI is installed on the nodes, but it is needed to add to the .bashrc the following exports:
+
+```shell
+export PATH=$PATH:/usr/lib64/openmpi/bin/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib
+```
+
+### Enabling passwordless ssh betwenn the compute nodes
+To run the multinode exercises passwordless ssh must be enabled among all the nodes involved in the computation.
+
+An easy way to implement this is to create a new ssh rsa key in one of the nodes and add the newly created public key to the authorized_key file, in the very same way you already did to enable passwordless ssh between the bastion node and the compute nodes, i.e.:
+
+```shell
+[me@esc1 ~]$ ssh-keygen -C username@esc -f ~/.ssh/id_rsa_student_escMPI
+Generating public/private rsa key pair.
+...
+[me@mesc1 ~]$  cat ~/.ssh/id_rsa_student_escMPI >> ~/.ssh/authorized_keys
+
+[me@esc1 ~]$ cat ~/.ssh/config
+
+Host esc1
+  Hostname esc25-a100-1
+  User username
+  IdentityFile ~/.ssh/id_rsa_student_escMPI
+
+
+Host esc2
+  Hostname esc25-a100-2
+  User username
+  IdentityFile ~/.ssh/id_rsa_student_escMPI
+
+Host *
+  ForwardX11 yes
+  ForwardAgent yes
+
+
+[me@esc1 ~]$ ssh esc2
+[me@esc2 ~]$ ssh esc1
+
+```
+
