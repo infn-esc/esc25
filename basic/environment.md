@@ -205,7 +205,7 @@ export PATH=$PATH:/usr/lib64/openmpi/bin/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib
 ```
 
-### Enabling passwordless ssh betwenn the compute nodes
+### Enabling passwordless ssh between the compute nodes
 To run the multinode exercises passwordless ssh must be enabled among all the nodes involved in the computation.
 
 An easy way to implement this is to create a new ssh rsa key in one of the nodes and add the newly created public key to the authorized_key file, in the very same way you already did to enable passwordless ssh between the bastion node and the compute nodes, i.e.:
