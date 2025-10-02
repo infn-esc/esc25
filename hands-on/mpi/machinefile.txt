@@ -1,2 +1,2 @@
-esc1  slots=1
-esc2  slots=1
+esc25-a100-1  slots=1
+esc25-a100-2  slots=1
