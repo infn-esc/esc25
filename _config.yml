@@ -77,13 +77,13 @@ menu:
       label: Address Sanitizer
     - name: am 
       label: Atomics and Mutex 
-  # - name: pybind
-  #   label: Python bindings
-  #   items:
-  #   - name: cpp_to_py
-  #     label: Using C++ in Python
-  #   - name: py_to_cpp
-  #     label: Using Python in C++
+  - name: pybind
+    label: Python bindings
+    items:
+    - name: cpp_to_py
+      label: Using C++ in Python
+    - name: py_to_cpp
+      label: Using Python in C++
 
 # Exclude from processing.
 # The following items will not be processed, by default.
