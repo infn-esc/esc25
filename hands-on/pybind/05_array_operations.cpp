@@ -16,4 +16,4 @@ PYBIND11_MODULE(ArrayOperations, m) {
 }
 
 // Bonus: try to implement the functions using both the request and unckecked methods
-// and check that the results are the same
+// and verify that the results are the same
