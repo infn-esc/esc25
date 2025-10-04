@@ -31,8 +31,8 @@ menu:
       label: Move operations
     - name: rvo
       label: Return Value Optimization
-    # - name: compiletime
-    #   label: Compile-time computation
+    - name: compiletime
+      label: Compile-time computation
   # - name: floatingpoints
   #   label: FLOATING POINT
   #   items:
