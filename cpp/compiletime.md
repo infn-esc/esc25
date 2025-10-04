@@ -8,7 +8,9 @@ The goal of these exercises is to get some feeling about the possibilities
 offered by the C++ language to perform computations at compile-time.
 
 ## Exercise 1
-Implement a template function `make_array` that takes a parameter pack of arithmetic
+
+Starting from [`compile_time_array.cpp`]({% include hands_on_base.md
+%}/basic/compile_time_array.cpp), implement a template function `make_array` that takes a parameter pack of arithmetic
 types (with the same type) and returns a `std::array` containing those values.
 Note: this exercise can be solved in a very trivial way by unpacking the pack in the
 array's constructor. For didactic purposes, don't do that.
