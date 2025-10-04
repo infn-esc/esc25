@@ -239,3 +239,11 @@ Host *
 
 ```
 
+## Environment configuration for TBB hands-on
+
+### Set the environment to locate the TBB library
+```shell
+[me@esc1 ~]$ source /opt/intel/oneapi/tbb/latest/env/vars.sh
+[me@esc1 ~]$ echo $TBBROOT
+/opt/intel/oneapi/tbb/2022.2/env/..
+```
