@@ -1,4 +1,11 @@
-# Introduction to GPU Programming 
+---
+title: Introduction to GPU Programming 
+layout: main
+section: gpu
+---
+
+The goal of this section is to introduce you to GPU programming using CUDA.
+
 ### Hands-on
 
 The CUDA Runtime API reference manual is a very useful source of information:

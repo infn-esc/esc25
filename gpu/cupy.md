@@ -1,5 +1,10 @@
-# GPU programming with CuPy
+---
+title: Introduction to GPU Programming with CuPy
+layout: main
+section: gpu
+---
 
+The goal of this section is to introduce you to GPU programming using CuPy.
 ## set up
 
 `ssh` to the machine with this command:

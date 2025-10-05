@@ -1,3 +1,10 @@
+---
+title: Introduction to Thrust
+layout: main
+section: gpu
+---
+
+The goal of this section is to introduce you to GPU programming using Thrust.
 # Thrust
 
 The four labs below mirror the CUDA ones but use the Thrust C++ library. All code lives in hands-on/gpu/thrust/XX_<name>/.
