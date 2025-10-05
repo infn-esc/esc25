@@ -50,11 +50,15 @@ menu:
   #   items:
   #   - name: pi
   #     label: Vectorize computation of pi
-  # - name: gpu
-  #   label: GPU Programming
-  #   items:
-  #   - name: cuda
-  #     label: CUDA
+  - name: gpu
+    label: GPU Programming
+    items:
+    - name: cuda
+      label: CUDA
+    - name: thrust
+      label: Thrust
+    - name: cupy
+      label: CuPy
   #   - name: portability
   #     label: Portability
   #   items:
