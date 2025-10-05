@@ -1,10 +1,4 @@
 # Introduction to GPU Programming 
-### Presentation:
-You can find the presentation here:
-<a href="
-https://docs.google.com/presentation/d/1Id7dLpzC0UlsJCJeXdJBvwigQ1aFaDmk0l0Pgkv7bwo/edit?usp=sharing" target="_blank">
-https://docs.google.com/presentation/d/1Id7dLpzC0UlsJCJeXdJBvwigQ1aFaDmk0l0Pgkv7bwo/edit?usp=sharing</a>
-
 ### Hands-on
 
 The CUDA Runtime API reference manual is a very useful source of information:
@@ -16,14 +10,11 @@ Check that your environment is correctly configured to compile CUDA code by runn
 $ nvcc --version
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2025 NVIDIA Corporation
-Built on Tue_May_27_02:21:03_PDT_2025
-Cuda compilation tools, release 12.9, V12.9.86
-Build cuda_12.9.r12.9/compiler.36037853_0
+Built on Wed_Aug_20_01:58:59_PM_PDT_2025
+Cuda compilation tools, release 13.0, V13.0.88
+Build cuda_13.0.r13.0/compiler.36424714_0
 ```
 
-```bash
-git clone https://github.com/felicepantaleo/gpu_training.git
-```
 
 Compile and run the `deviceQuery` application:
 ```bash
@@ -96,7 +87,7 @@ These short, self‑contained labs walk students from CUDA basics to a tiny pred
 3. Run → the program prints “…PASSED 🎉” when assertions succeed.
 ```
 
-All code lives under `gpu_training/`.
+All code lives under `/hands-on/gpu/cuda`.
 
 ---
 
