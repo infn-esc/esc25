@@ -1,7 +1,7 @@
 ---
 title: GPU Programming
 layout: main
-section: cpp
+section: gpu
 ---
 
 {% include section_toc.md %}
