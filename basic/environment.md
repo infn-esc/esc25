@@ -214,7 +214,7 @@ An easy way to implement this is to create a new ssh rsa key in one of the nodes
 [me@esc1 ~]$ ssh-keygen -C username@esc -f ~/.ssh/id_rsa_student_escMPI
 Generating public/private rsa key pair.
 ...
-[me@mesc1 ~]$  cat ~/.ssh/id_rsa_student_escMPI >> ~/.ssh/authorized_keys
+[me@mesc1 ~]$  cat ~/.ssh/id_rsa_student_escMPI.pub >> ~/.ssh/authorized_keys
 
 [me@esc1 ~]$ cat ~/.ssh/config
 
