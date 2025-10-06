@@ -36,6 +36,9 @@ $mpirun -hostfile machinefile.txt -n 2 MPI_Hello.out
 You can now go and try with the other exercises avalble on the esc25/hands-on/mpi directory (see the slides for more details):
 
 1) The MPI PingPong
+
 2) The Non Blocking MPI PingPong
+
 3) The MPI Pi Computation
+
 4) The Trivial MPI N_Body Simulation
