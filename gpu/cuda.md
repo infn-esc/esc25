@@ -195,7 +195,7 @@ make serial
 
 Can you use the asynchronous GPU kernel launch to execute the generation of a git frame on the CPU while the GPU is running the next iteration?
 
-<img src="simulation.gif" alt="circleoflife" title="Circle of Life" width="500" height="500" />
+<img src="../hands-on/gpu/simulation.gif" alt="circleoflife" title="Circle of Life" width="500" height="500" />
 
 ---
 
