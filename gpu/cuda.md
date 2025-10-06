@@ -11,6 +11,13 @@ The goal of this section is to introduce you to GPU programming using CUDA.
 The CUDA Runtime API reference manual is a very useful source of information:
 <a href="http://docs.nvidia.com/cuda/cuda-runtime-api/index.html" target="_blank">http://docs.nvidia.com/cuda/cuda-runtime-api/index.html</a>
 
+Remember to add at the end of your `~/.bashrc` file the following two lines:
+```bash
+export PATH=/usr/local/cuda-13/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-13/lib64:$LD_LIBRARY_PATH
+```
+
+
 
 Check that your environment is correctly configured to compile CUDA code by running:
 ```bash
@@ -21,6 +28,8 @@ Built on Wed_Aug_20_01:58:59_PM_PDT_2025
 Cuda compilation tools, release 13.0, V13.0.88
 Build cuda_13.0.r13.0/compiler.36424714_0
 ```
+
+
 
 
 Compile and run the `deviceQuery` application:
