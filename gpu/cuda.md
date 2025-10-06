@@ -8,10 +8,8 @@ The goal of this section is to introduce you to GPU programming using CUDA.
 
 ### Hands-on
 
-The CUDA Runtime API reference manual is a very useful source of information:
-<a href="http://docs.nvidia.com/cuda/cuda-runtime-api/index.html" target="_blank">http://docs.nvidia.com/cuda/cuda-runtime-api/index.html</a>
+Remember to append the following two lines to your `~/.bashrc` file:
 
-Remember to add at the end of your `~/.bashrc` file the following two lines:
 ```bash
 export PATH=/usr/local/cuda-13/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-13/lib64:$LD_LIBRARY_PATH
@@ -28,9 +26,6 @@ Built on Wed_Aug_20_01:58:59_PM_PDT_2025
 Cuda compilation tools, release 13.0, V13.0.88
 Build cuda_13.0.r13.0/compiler.36424714_0
 ```
-
-
-
 
 Compile and run the `deviceQuery` application:
 ```bash
@@ -211,4 +206,9 @@ Can you use the asynchronous GPU kernel launch to execute the generation of a gi
 * Remember `cudaStreamSynchronize()` before timing or freeing async memory.
 * `dim3` defaults `z=1`; you almost never need a non‑unit Z for these labs.
 * For reductions, `blockDim.x` **must** be a power‑of‑two when you half the stride each step.
+
+
+
+The CUDA Runtime API reference manual is a very useful source of information:
+<a href="http://docs.nvidia.com/cuda/cuda-runtime-api/index.html" target="_blank">http://docs.nvidia.com/cuda/cuda-runtime-api/index.html</a>
 
