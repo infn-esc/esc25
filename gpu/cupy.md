@@ -9,12 +9,16 @@ The goal of this section is to introduce you to GPU programming using CuPy.
 
 `ssh` to the machine with this command:
 ```bash
-ssh -L XXXX:localhost:XXXX <username>@131.154.XX.YY
+ssh -L XXXX:localhost:XXXX <username>@<machine-address>
 ```
 where XXXX is a 4-digit number, unique for each user.
-*Your 4-digit number is `90` plus your ID from the table in the markdown*.
 
-Once you are inside the machine, you can start JupyterLab with the command:
+Then setup the Python enviromenti with:
+```bash
+source /usr/share/esc-env/bin/activate
+```
+
+Now you can start JupyterLab with the command:
 ```bash
 jupyter-lab --port XXXX
 ```
