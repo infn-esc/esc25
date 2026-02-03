@@ -98,7 +98,7 @@ These short, self‑contained labs walk students from CUDA basics to a tiny pred
 3. Run → the program prints “…PASSED 🎉” when assertions succeed.
 ```
 
-All code lives under `/hands-on/gpu/cuda`.
+All code lives under `hands-on/gpu/cuda`.
 
 ---
 
